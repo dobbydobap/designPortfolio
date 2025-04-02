@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
