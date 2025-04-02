@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import nameLogo from "../assets/images/nameLogo.png";
 import blue from "../assets/images/blue.png";
 import red from "../assets/images/red.png";
@@ -7,6 +8,7 @@ import green from "../assets/images/green.png";
 
 function Header() {
   const [userAvatar, setUserAvatar] = useState(blue);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const selectedUser = localStorage.getItem("selectedUser");
@@ -14,7 +16,7 @@ function Header() {
     // Set the avatar based on the user type
     if (selectedUser === "Recruiter") {
       setUserAvatar(blue);
-    } else if (selectedUser === "Aspiring Developer") {
+    } else if (selectedUser === "Lost Kid") {
       setUserAvatar(red);
     } else if (selectedUser === "Stalker") {
       setUserAvatar(yellow);
@@ -24,6 +26,10 @@ function Header() {
       setUserAvatar(blue); 
     }
   }, []);
+
+  const handleAvatarClick = () => {
+    navigate("/");
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black to-transparent">
@@ -38,7 +44,8 @@ function Header() {
           <img
             src={userAvatar}
             alt="User Avatar"
-            className="h-8 w-8 rounded-lg cursor-pointer"
+            className="h-8 w-8 rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+            onClick={handleAvatarClick}
           />
         </div>
       </div>

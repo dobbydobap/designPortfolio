@@ -66,7 +66,7 @@ function LandingPage() {
         </div>
         <div
           className="flex flex-col items-center group cursor-pointer"
-          onClick={() => handleUserSelection("Aspiring Developer", "/aspiring-developer")}
+          onClick={() => handleUserSelection("Lost Kid", "/lost-kid")}
         >
           <img
             src={red}
@@ -78,7 +78,7 @@ function LandingPage() {
             style={{ fontSize: `${sizes.textSize * 0.7}px` }}
             className="text-gray-500 group-hover:text-white transition-all"
           >
-            Aspiring Developer
+            Lost Kid
           </p>
         </div>
         <div
