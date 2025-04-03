@@ -54,7 +54,7 @@ function Hero({
           </button>
           <button
             onClick={onSecondaryButtonClick}
-            className="bg-black/30 text-white px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 flex items-center gap-2 rounded hover:bg-black/20 transition-all duration-100"
+            className="bg-black/50 text-white px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 flex items-center gap-2 rounded hover:bg-black/20 transition-all duration-100"
           >
             <SecondaryIcon />
             <span className="text-xs sm:text-sm md:text-base font-bold text-white">

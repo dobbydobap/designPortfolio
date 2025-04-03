@@ -19,7 +19,7 @@ function Recruiter() {
         heading="Hiring? Let's Make It Easy!"
         description="You're looking for top talent, and—surprise—it's me. Check out my projects, skills, and why I'm the perfect fit."
         primaryButtonText="Download Resume"
-        secondaryButtonText="More Info"
+        secondaryButtonText="LinkedIn"
         onPrimaryButtonClick={handleResumeClick}
         onSecondaryButtonClick={handleMoreInfoClick}
       />

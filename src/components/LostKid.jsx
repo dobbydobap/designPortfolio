@@ -5,11 +5,12 @@ import red from "../assets/images/red.png";
 
 function LostKid() {
   const handleLearnClick = () => {
+    window.open("https://vector-nine.vercel.app/", "_blank");
     console.log("Learn More button clicked");
   };
 
   const handleDetailsClick = () => {
-    console.log("Details button clicked");
+    window.open("https://chat.whatsapp.com/H9eTkTOCxa2LQimCk90XXc", "_blank");
   };
 
   return (
@@ -19,14 +20,13 @@ function LostKid() {
         backgroundImage="https://picsum.photos/1280/720"
         heading="College Hunt Driving You Crazy?"
         description="Been there, done that! Let me show you how I got into Scaler School of Technology and how you can too."
-        primaryButtonText="Learn More"
-        secondaryButtonText="View Details"
+        primaryButtonText="Start Learning"
+        secondaryButtonText="Find your tribe"
         onPrimaryButtonClick={handleLearnClick}
         onSecondaryButtonClick={handleDetailsClick}
       />
-      
     </div>
   );
 }
 
-export default LostKid; 
+export default LostKid;
