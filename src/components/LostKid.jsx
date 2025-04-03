@@ -13,7 +13,7 @@ function LostKid() {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="relative w-full h-screen">
       <Header />
       <Hero
         backgroundImage="https://picsum.photos/1280/720"

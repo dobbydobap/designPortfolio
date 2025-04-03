@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
-import blue from "../assets/images/blue.png";
 
 function Recruiter() {
   const handleResumeClick = () => {
@@ -13,7 +12,7 @@ function Recruiter() {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="relative w-full h-screen">
       <Header />
       <Hero
         backgroundImage="https://picsum.photos/1280/720"
