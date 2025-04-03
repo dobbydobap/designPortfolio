@@ -1,32 +1,31 @@
 import React from "react";
-import Header from "./header";
+import Header from "./Header";
 import Hero from "./Hero";
 import yellow from "../assets/images/yellow.png";
 
 function Stalker() {
-  const handleConnectClick = () => {
-    console.log("Connect button clicked");
+  const handleProjectsClick = () => {
+    console.log("Projects button clicked");
   };
 
-  const handleLearnMoreClick = () => {
-    console.log("Learn More button clicked");
+  const handleMoreInfoClick = () => {
+    console.log("More Info button clicked");
   };
 
   return (
-    <>
-      <div>
-        <Header />
-        <Hero
-          backgroundImage="https://picsum.photos/1280/720"
-          heading="Caught You Snooping!"
-          description="Since you're here, might as well check out my projects, skills, and maybe even drop a hello. No judgment, I promise."
-          primaryButtonText="Discover More"
-          secondaryButtonText="Learn More"
-          onPrimaryButtonClick={handleConnectClick}
-          onSecondaryButtonClick={handleLearnMoreClick}
-        />
-      </div>
-    </>
+    <div className="flex flex-col w-full">
+      <Header />
+      <Hero
+        backgroundImage="https://picsum.photos/1280/720"
+        heading="Caught You Snooping!"
+        description="Well, since you're here, check out my projects, tech stack, and what makes me tick. No judgment, just pure tech love!"
+        primaryButtonText="View Projects"
+        secondaryButtonText="Learn More"
+        onPrimaryButtonClick={handleProjectsClick}
+        onSecondaryButtonClick={handleMoreInfoClick}
+      />
+      
+    </div>
   );
 }
 

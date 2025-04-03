@@ -1,32 +1,31 @@
 import React from "react";
-import Header from "./header";
+import Header from "./Header";
 import Hero from "./Hero";
 import red from "../assets/images/red.png";
 
 function LostKid() {
-  const handleMentorClick = () => {
-    console.log("Mentor button clicked");
+  const handleLearnClick = () => {
+    console.log("Learn More button clicked");
   };
 
-  const handleResourcesClick = () => {
-    console.log("Resources button clicked");
+  const handleDetailsClick = () => {
+    console.log("Details button clicked");
   };
 
   return (
-    <>
-      <div>
-        <Header />
-        <Hero
-          backgroundImage="https://picsum.photos/1280/720"
-          heading="College Hunt Driving You Crazy?"
-          description="Scaler School of Technology is the dream? I've got test series, mock interviews, and all the guidance you need to make it happen."
-          primaryButtonText="Start Preparing"
-          secondaryButtonText="Learn More"
-          onPrimaryButtonClick={handleMentorClick}
-          onSecondaryButtonClick={handleResourcesClick}
-        />
-      </div>
-    </>
+    <div className="flex flex-col w-full">
+      <Header />
+      <Hero
+        backgroundImage="https://picsum.photos/1280/720"
+        heading="College Hunt Driving You Crazy?"
+        description="Been there, done that! Let me show you how I got into Scaler School of Technology and how you can too."
+        primaryButtonText="Learn More"
+        secondaryButtonText="View Details"
+        onPrimaryButtonClick={handleLearnClick}
+        onSecondaryButtonClick={handleDetailsClick}
+      />
+      
+    </div>
   );
 }
 

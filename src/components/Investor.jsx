@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./header";
+import Header from "./Header";
 import Hero from "./Hero";
 import green from "../assets/images/green.png";
 
@@ -13,20 +13,19 @@ function Investor() {
   };
 
   return (
-    <>
-      <div>
-        <Header />
-        <Hero
-          backgroundImage="https://picsum.photos/1280/720"
-          heading="Big Bets on the Next Big Thing?"
-          description="I'm building something exciting in ed-tech. Let's talk numbers, vision, and how you can be part of something game-changing."
-          primaryButtonText="View Pitch Deck"
-          secondaryButtonText="Learn More"
-          onPrimaryButtonClick={handlePitchClick}
-          onSecondaryButtonClick={handleDetailsClick}
-        />
-      </div>
-    </>
+    <div className="flex flex-col w-full">
+      <Header />
+      <Hero
+        backgroundImage="https://picsum.photos/1280/720"
+        heading="Big Bets on the Next Big Thing?"
+        description="I'm building something exciting in ed-tech. Let's talk numbers, vision, and how you can be part of something game-changing."
+        primaryButtonText="View Pitch Deck"
+        secondaryButtonText="Learn More"
+        onPrimaryButtonClick={handlePitchClick}
+        onSecondaryButtonClick={handleDetailsClick}
+      />
+      
+    </div>
   );
 }
 
