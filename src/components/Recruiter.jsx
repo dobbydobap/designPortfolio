@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
+import RecruiterSection from "./sections/RecruiterSection";
 
 function Recruiter() {
   const handleResumeClick = () => {
@@ -12,7 +13,7 @@ function Recruiter() {
   };
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full min-h-screen">
       <Header />
       <Hero
         backgroundImage="https://picsum.photos/1280/720"
@@ -23,6 +24,7 @@ function Recruiter() {
         onPrimaryButtonClick={handleResumeClick}
         onSecondaryButtonClick={handleMoreInfoClick}
       />
+      <RecruiterSection />
     </div>
   );
 }

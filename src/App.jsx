@@ -4,7 +4,8 @@ import LandingPage from './components/LandingPage';
 import Recruiter from './components/Recruiter';
 import LostKid from './components/LostKid';
 import Stalker from './components/Stalker'; 
-import Investor from './components/Investor'; 
+import Investor from './components/Investor';
+import TerminalFun from './components/sections/TerminalFun';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/recruiter" element={<Recruiter />} />
         <Route path="/lost-kid" element={<LostKid />} />
+        <Route path="/lost-kid/terminal-fun" element={<TerminalFun />} />
         <Route path="/stalker" element={<Stalker />} />
         <Route path="/investor" element={<Investor />} />
       </Routes>

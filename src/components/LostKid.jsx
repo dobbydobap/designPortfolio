@@ -1,30 +1,30 @@
 import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
-import red from "../assets/images/red.png";
+import LostKidSection from "./sections/LostKidSection";
 
 function LostKid() {
-  const handleLearnClick = () => {
-    window.open("https://vector-nine.vercel.app/", "_blank");
-    console.log("Learn More button clicked");
+  const handleApplyClick = () => {
+    console.log("Apply button clicked");
   };
 
-  const handleDetailsClick = () => {
-    window.open("https://chat.whatsapp.com/H9eTkTOCxa2LQimCk90XXc", "_blank");
+  const handleMoreInfoClick = () => {
+    console.log("More Info button clicked");
   };
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full min-h-screen">
       <Header />
       <Hero
         backgroundImage="https://picsum.photos/1280/720"
         heading="College Hunt Driving You Crazy?"
-        description="Been there, done that! Let me show you how I got into Scaler School of Technology and how you can too."
-        primaryButtonText="Start Learning"
-        secondaryButtonText="Find your tribe"
-        onPrimaryButtonClick={handleLearnClick}
-        onSecondaryButtonClick={handleDetailsClick}
+        description="I've been there. Let me show you how Scaler School of Technology changed everything for me."
+        primaryButtonText="Apply Now"
+        secondaryButtonText="Learn More"
+        onPrimaryButtonClick={handleApplyClick}
+        onSecondaryButtonClick={handleMoreInfoClick}
       />
+      <LostKidSection />
     </div>
   );
 }
