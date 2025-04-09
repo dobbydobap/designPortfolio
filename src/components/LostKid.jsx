@@ -5,11 +5,11 @@ import LostKidSection from "./sections/LostKidSection";
 
 function LostKid() {
   const handleApplyClick = () => {
-    console.log("Apply button clicked");
+    window.open("https://vector-nine.vercel.app/", "_blank");
   };
 
   const handleMoreInfoClick = () => {
-    console.log("More Info button clicked");
+    window.open("https://chat.whatsapp.com/H9eTkTOCxa2LQimCk90XXc", "_blank");
   };
 
   return (
@@ -19,8 +19,8 @@ function LostKid() {
         backgroundImage="https://picsum.photos/1280/720"
         heading="College Hunt Driving You Crazy?"
         description="I've been there. Let me show you how Scaler School of Technology changed everything for me."
-        primaryButtonText="Apply Now"
-        secondaryButtonText="Learn More"
+        primaryButtonText="Level Up"
+        secondaryButtonText="Join chaos"
         onPrimaryButtonClick={handleApplyClick}
         onSecondaryButtonClick={handleMoreInfoClick}
       />

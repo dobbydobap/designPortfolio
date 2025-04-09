@@ -30,8 +30,12 @@ const LostKidSection = () => {
     }
   };
 
-  const handleCardClick = (type) => {
-    navigate(`/lost-kid/${type}`);
+  const handleCardClick = (card) => {
+    if (card.link) {
+      navigate(card.link);
+    } else {
+      navigate(`/lost-kid/${card.type}`);
+    }
   };
 
   const sections = [
@@ -90,17 +94,12 @@ const LostKidSection = () => {
           description: 'Try out some fun terminal activities and games',
           type: 'terminal-fun'
         },
-        { 
-          title: 'Code Playground', 
-          image: 'https://picsum.photos/300/169',
-          description: 'Experiment with code in a safe environment',
-          type: 'playground'
-        },
-        { 
-          title: 'Dev Memes', 
-          image: 'https://picsum.photos/300/169',
-          description: 'Enjoy some developer humor and memes',
-          type: 'memes'
+        {
+          title: "Shaurya.exe",
+          description: "Chat with Shaurya's AI assistant",
+          type: "ai",
+          image: "https://picsum.photos/300/169",
+          link: "/lost-kid/shaurya-exe"
         }
       ]
     }
@@ -120,7 +119,7 @@ const LostKidSection = () => {
                   variants={cardVariants}
                   initial="initial"
                   whileHover="hover"
-                  onClick={() => handleCardClick(card.type)}
+                  onClick={() => handleCardClick(card)}
                   style={{ position: 'relative' }}
                 >
                   <div className="aspect-video rounded overflow-hidden">

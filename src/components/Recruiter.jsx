@@ -5,11 +5,11 @@ import RecruiterSection from "./sections/RecruiterSection";
 
 function Recruiter() {
   const handleResumeClick = () => {
-    console.log("Resume button clicked");
+    window.open("https://drive.google.com/file/d/12AXRfYhws0B2wWI7w4pokBwlrUl3jFgc/view", "_blank");
   };
 
   const handleMoreInfoClick = () => {
-    console.log("More Info button clicked");
+    window.open("https://www.linkedin.com/in/astro-dude/", "_blank");
   };
 
   return (
