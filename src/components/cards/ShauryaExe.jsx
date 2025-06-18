@@ -100,7 +100,7 @@ Co-Founder & CEO – Vector (Mar 2025 – Present)
 
 Built a full-stack ed-tech platform using React.js + Tailwind CSS
 
-Mentored 25+ students, conducted 5+ mock interviews
+Mentored 100+ students, conducted 5+ mock interviews
 
 Created targeted test series that boosted exam scores by 30%
 

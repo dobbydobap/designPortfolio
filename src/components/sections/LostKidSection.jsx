@@ -34,7 +34,7 @@ const LostKidSection = () => {
     if (card.link) {
       navigate(card.link);
     } else {
-      navigate(`/lost-kid/${card.type}`);
+      navigate(`/${card.type}`);
     }
   };
 
@@ -99,7 +99,7 @@ const LostKidSection = () => {
           description: "Chat with Shaurya's AI assistant",
           type: "ai",
           image: "https://picsum.photos/300/169",
-          link: "/lost-kid/shaurya-exe"
+          link: "/shaurya-exe"
         }
       ]
     }
