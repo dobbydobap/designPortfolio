@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import RecruiterSection from "./sections/RecruiterSection";
+import shaurya from "../assets/images/shaurya.jpg";
 
 function Recruiter() {
   const handleResumeClick = () => {
@@ -16,7 +17,7 @@ function Recruiter() {
     <div className="relative w-full min-h-screen">
       <Header />
       <Hero
-        backgroundImage="https://picsum.photos/1280/720"
+        backgroundImage={shaurya}
         heading="Hiring? Let's Make It Easy!"
         description="You're looking for top talent, and—surprise—it's me. Check out my projects, skills, and why I'm the perfect fit."
         primaryButtonText="Download Resume"
