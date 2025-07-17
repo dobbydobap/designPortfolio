@@ -12,6 +12,7 @@ import hangover from "../../assets/images/cards/hangover.jpeg";
 import alice from "../../assets/images/cards/alice.jpg";
 import moneyheist from "../../assets/images/cards/moneyheist.jpg";
 import wednesday from "../../assets/images/cards/wednesday.png";
+import drone from "../../assets/images/cards/drone.jpg"; 
 
 const StalkerSection = () => {
   const navigate = useNavigate();
@@ -163,6 +164,14 @@ const StalkerSection = () => {
             "A revolutionary web chat application that enables communication without internet connectivity for local networks.",
           details: "Go try this amazing project!",
           link: "https://waves-c53a.onrender.com/",
+        },
+        {
+          title: "Quadcopter drone",
+          image: drone,
+          description: "A quadcopter drone project",
+          longDescription:
+            "A very normal quadcopter drone project that showcases the basics of drone technology.",
+          link: "https://drive.google.com/drive/u/3/folders/1cgoFiIB0W_73CHqpyXkBSaq_o96Jq2DD",
         },
       ],
     },
