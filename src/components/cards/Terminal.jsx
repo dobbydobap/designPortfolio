@@ -35,6 +35,29 @@ const TerminalFun = () => {
   const CELL_SIZE = 1;
   const GAME_SPEED = 150; // milliseconds
 
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
+  const hasReloaded = useRef(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const checkScreen = () => {
+      const current = window.innerWidth >= 1024;
+      setIsLargeScreen(current);
+      if (
+        !hasReloaded.current &&
+        current !== (window.__wasLargeScreen ?? current)
+      ) {
+        hasReloaded.current = true;
+        window.__wasLargeScreen = current;
+        window.location.reload();
+      }
+      window.__wasLargeScreen = current;
+    };
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   const initializeSnake = () => {
     return [
       { x: 5, y: 7 },
@@ -262,6 +285,9 @@ const TerminalFun = () => {
         <span className="text-yellow-300">about</span> - Learn about this
         portfolio
       </div>,
+      <div key="help-resume" className="text-green-300">
+        <span className="text-yellow-300">resume</span> - View my resume
+      </div>,
       <div key="help-projects" className="text-green-300">
         <span className="text-yellow-300">projects</span> - List my projects
       </div>,
@@ -334,6 +360,24 @@ const TerminalFun = () => {
         way.
       </div>,
       <div> </div>,
+    ],
+    resume: () => [
+      <div> </div>,
+      <div key="resume-header" className="mb-2 font-bold text-blue-300">
+        My Resume:
+      </div>,
+      <div key="resume-link" className="mb-1">
+        Click on the link to view or download my resume:
+        <a
+          href="https://drive.google.com/file/d/12AXRfYhws0B2wWI7w4pokBwlrUl3jFgc/view"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 underline ml-2"
+        >
+          View Resume
+        </a>
+        <div> </div>
+      </div>,
     ],
     projects: () => [
       <div> </div>,
@@ -469,7 +513,7 @@ const TerminalFun = () => {
         Contact Information:
       </div>,
       <div key="contact-email" className="mb-1">
-        <span className="text-yellow-300 font-semibold">Email:</span>{" "}
+        <span className="text-pink-300 font-semibold">Email:</span>{" "}
         <a
           href="mailto:sagittariusshaurya5@email.com"
           className="text-blue-400 underline"
@@ -489,9 +533,20 @@ const TerminalFun = () => {
         </a>
       </div>,
       <div key="contact-github" className="mb-1">
-        <span className="text-pink-300 font-semibold">GitHub:</span>{" "}
+        <span className="text-yellow-300 font-semibold">GitHub:</span>{" "}
         <a
           href="https://github.com/Astro-Dude"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 underline"
+        >
+          https://github.com/Astro-Dude
+        </a>
+      </div>,
+      <div key="contact-github" className="mb-1">
+        <span className="text-fuchsia-400 font-semibold">Instagram:</span>{" "}
+        <a
+          href="https://www.instagram.com/_shauryanium.perfrauleinide_/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 underline"
@@ -554,159 +609,161 @@ const TerminalFun = () => {
 
   return (
     <div className="fixed inset-0 bg-[#1d1d1f]">
-      {/* MacBook Desktop Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${macbook})` }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
-
-      {/* Dock */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full">
-        <motion.div
-          whileHover={{ scale: 1.1, y: -10 }}
-          whileTap={{ scale: 0.95 }}
-          className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center cursor-pointer"
-          onClick={() => handleAppClick("home")}
-        >
-          <FaHome className="text-white text-xl" />
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1, y: -10 }}
-          whileTap={{ scale: 0.95 }}
-          className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center cursor-pointer"
-          onClick={() => handleAppClick("terminal")}
-        >
-          <FaTerminal className="text-white text-xl" />
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1, y: -10 }}
-          whileTap={{ scale: 0.95 }}
-          className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center cursor-pointer"
-          onClick={() => handleAppClick("back")}
-        >
-          <FaArrowLeft className="text-white text-xl" />
-        </motion.div>
-      </div>
-
-      {/* Menu Bar */}
-      <div className="absolute top-0 left-0 right-0 h-6 bg-black/30 backdrop-blur-md flex items-center px-4 text-xs text-white">
-        <div className="flex items-center space-x-4">
-          <span>Shaurya Verma</span>
-        </div>
-      </div>
-
-      {/* Terminal Window */}
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#1d1d1f] rounded-lg shadow-2xl overflow-hidden border border-gray-700/50"
-        style={{
-          boxShadow:
-            "0 0 30px rgba(16, 185, 129, 0.2), 0 0 60px rgba(16, 185, 129, 0.1)",
-          backdropFilter: "blur(10px)",
-        }}
-      >
-        {/* Terminal Header */}
-        <div className="h-6 bg-[#2d2d2f] flex items-center px-4 text-xs text-gray-400 border-b border-gray-700/50">
-          <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-          </div>
-          <div className="ml-2 text-gray-400">Terminal</div>
-        </div>
-
-        {/* Terminal Content */}
-        <div
-          ref={terminalRef}
-          className="h-[calc(100%-24px)] bg-black/90 p-4 overflow-y-auto font-mono terminal-scrollbar"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.85))",
-          }}
-        >
-          <div className="w-full text-left overflow-x-hidden break-words">
-            {terminalOutput.map((line, index) => (
-              <div
-                key={index}
-                className={`mb-1 whitespace-pre-wrap break-words text-left ${
-                  typeof line === "string" && line.includes("Command not found")
-                    ? "text-red-500"
-                    : "text-green-400"
-                }`}
-              >
-                {line}
-              </div>
-            ))}
-            {gameState === "snake" && (
-              <div className="text-green-400 whitespace-pre font-mono">
-                <div className="mb-2 text-red-400 font-semibold">
-                  Press Q to quit
-                </div>
-                <div className="mb-2 text-yellow-300 font-semibold">
-                  Score: {score}
-                </div>
-                <div className="bg-black/20 p-2 rounded inline-block leading-[0.8] tracking-[0.2em]">
-                  {renderGame()}
-                </div>
-              </div>
-            )}
-            <div className="flex items-start text-left">
-              <div className="text-green-400 flex items-center">
-                <span className="mr-2">$</span>
-                <input
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                  className="bg-transparent text-green-400 outline-none flex-1 text-left"
-                  autoFocus
-                />
-              </div>
+      {typeof window !== "undefined" && !isLargeScreen ? (
+        <div className="flex items-center justify-center min-h-screen bg-black text-white text-center px-4">
+          <div>
+            <div className="text-2xl font-bold mb-4">Terminal Unavailable</div>
+            <div className="text-lg">
+              This interactive terminal is only available on larger screens
+              (laptop/desktop).
+              <br />
+              Please use a device with a wider display to access this feature.
             </div>
           </div>
         </div>
-      </motion.div>
+      ) : (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${macbook})` }}
+          >
+            <div className="absolute inset-0 bg-black/50" />
+          </div>
 
-      <style jsx>{`
-        .terminal-scrollbar::-webkit-scrollbar {
-          width: 4px;
-        }
+          {/* Dock */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full">
+            <motion.div
+              whileHover={{ scale: 1.1, y: -10 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center cursor-pointer"
+              onClick={() => handleAppClick("home")}
+            >
+              <FaHome className="text-white text-xl" />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1, y: -10 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center cursor-pointer"
+              onClick={() => handleAppClick("terminal")}
+            >
+              <FaTerminal className="text-white text-xl" />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1, y: -10 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center cursor-pointer"
+              onClick={() => handleAppClick("back")}
+            >
+              <FaArrowLeft className="text-white text-xl" />
+            </motion.div>
+          </div>
 
-        .terminal-scrollbar::-webkit-scrollbar-track {
-          background: rgba(26, 26, 26, 0.5);
-        }
+          {/* Terminal Window */}
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#1d1d1f] rounded-lg shadow-2xl overflow-hidden border border-gray-700/50"
+            style={{
+              boxShadow:
+                "0 0 30px rgba(16, 185, 129, 0.2), 0 0 60px rgba(16, 185, 129, 0.1)",
+              backdropFilter: "blur(10px)",
+            }}
+          >
+            {/* Terminal Header */}
+            <div className="h-6 bg-[#2d2d2f] flex items-center px-4 text-xs text-gray-400 border-b border-gray-700/50">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <div className="ml-2 text-gray-400">shaurya@portfolio:~$</div>
+            </div>
 
-        .terminal-scrollbar::-webkit-scrollbar-thumb {
-          background: #10b981;
-          border-radius: 2px;
-        }
+            {/* Terminal Content */}
+            <div
+              ref={terminalRef}
+              className="h-[calc(100%-24px)] bg-black/90 p-4 overflow-y-auto font-mono terminal-scrollbar"
+              style={{
+                background:
+                  "linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.85))",
+              }}
+            >
+              <div className="w-full text-left overflow-x-hidden break-words">
+                {terminalOutput.map((line, index) => (
+                  <div
+                    key={index}
+                    className={`mb-1 whitespace-pre-wrap break-words text-left ${
+                      typeof line === "string" &&
+                      line.includes("Command not found")
+                        ? "text-red-500"
+                        : "text-green-400"
+                    }`}
+                  >
+                    {line}
+                  </div>
+                ))}
+                {gameState === "snake" && (
+                  <div className="text-green-400 whitespace-pre font-mono">
+                    <div className="mb-2 text-red-400 font-semibold">
+                      Press Q to quit
+                    </div>
+                    <div className="mb-2 text-yellow-300 font-semibold">
+                      Score: {score}
+                    </div>
+                    <div className="bg-black/20 p-2 rounded inline-block leading-[0.8] tracking-[0.2em]">
+                      {renderGame()}
+                    </div>
+                  </div>
+                )}
+                <div className="flex items-start text-left">
+                  <div className="text-green-400 flex items-center">
+                    <span className="mr-2">$</span>
+                    <input
+                      type="text"
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                      onKeyDown={handleKeyDown}
+                      className="bg-transparent text-green-400 outline-none flex-1 text-left"
+                      autoFocus
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
 
-        .terminal-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #059669;
-        }
-
-        .terminal-scrollbar::-webkit-scrollbar-corner {
-          background: rgba(26, 26, 26, 0.5);
-        }
-
-        /* Add a subtle glow effect to the terminal */
-        .terminal-window {
-          position: relative;
-        }
-
-        .terminal-window::before {
-          content: "";
-          position: absolute;
-          inset: -1px;
-          background: linear-gradient(45deg, #10b981, transparent);
-          border-radius: 8px;
-          z-index: -1;
-          opacity: 0.2;
-        }
-      `}</style>
+          <style jsx>{`
+            .terminal-scrollbar::-webkit-scrollbar {
+              width: 4px;
+            }
+            .terminal-scrollbar::-webkit-scrollbar-track {
+              background: rgba(26, 26, 26, 0.5);
+            }
+            .terminal-scrollbar::-webkit-scrollbar-thumb {
+              background: #10b981;
+              border-radius: 2px;
+            }
+            .terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+              background: #059669;
+            }
+            .terminal-scrollbar::-webkit-scrollbar-corner {
+              background: rgba(26, 26, 26, 0.5);
+            }
+            .terminal-window {
+              position: relative;
+            }
+            .terminal-window::before {
+              content: "";
+              position: absolute;
+              inset: -1px;
+              background: linear-gradient(45deg, #10b981, transparent);
+              border-radius: 8px;
+              z-index: -1;
+              opacity: 0.2;
+            }
+          `}</style>
+        </>
+      )}
     </div>
   );
 };

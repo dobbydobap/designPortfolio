@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import LostKidSection from "./sections/LostKidSection";
-import shaurya from "../assets/images/shaurya.jpg";
+import shaurya from "../assets/images/shaurya2.jpeg";
 
 function LostKid() {
   const handleApplyClick = () => {

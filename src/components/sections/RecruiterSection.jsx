@@ -141,6 +141,16 @@ const RecruiterSection = () => {
           link: "https://www.linkedin.com/in/astro-dude/",
         },
         {
+          title: "GitHub",
+          image: github,
+          description: "Check out my code",
+          type: "github",
+          longDescription:
+            "Explore my open-source contributions and personal projects on GitHub.",
+          details: "",
+          link: "https://github.com/Astro-Dude",
+        },
+        {
           title: "CodeChef",
           image: codechef,
           description: "Competitive Programming Profile",
@@ -180,7 +190,8 @@ const RecruiterSection = () => {
         {
           title: "Scaler School of Technology",
           image: sst,
-          description: "Software Engineering Program (2024–2028)",
+          description: "Software Engineering Program",
+          date: "2024–2028",
           type: "education-sst",
           longDescription:
             "Intensive software engineering program at Scaler School of Technology, with mentorship, project-based learning, and industry exposure. Academic degrees are awarded by BITS Pilani (B.Sc.) and Woolf University (M.Sc.).",
@@ -191,28 +202,35 @@ const RecruiterSection = () => {
         {
           title: "BITS Pilani",
           image: bits,
-          description: "B.Sc. in Computer Science (2024–2027)",
+          description: "B.Sc. in Computer Science",
+          date: "2024–2027",
           type: "education-bits",
-          longDescription: "Pursuing a Bachelor of Science in Computer Science from BITS Pilani, with a curriculum focused on core CS fundamentals, algorithms, and hands-on software engineering.",
-          details: "Coursework includes Data Structures, Algorithms, Operating Systems, and more.",
+          longDescription:
+            "Pursuing a Bachelor of Science in Computer Science from BITS Pilani, with a curriculum focused on core CS fundamentals, algorithms, and hands-on software engineering.",
+          details:
+            "Coursework includes Data Structures, Algorithms, Operating Systems, and more.",
           link: "https://www.coursera.org/degrees/bachelor-of-science-computer-science-bits",
         },
         {
           title: "Woolf University",
           image: woolf,
-          description: "M.Sc. in Computer Science (2027–2028)",
+          description: "M.Sc. in Computer Science",
+          date: "2027–2028",
           type: "education-woolf",
-          longDescription: "Enrolled in a Master of Science in Computer Science at Woolf University.",
+          longDescription:
+            "Enrolled in a Master of Science in Computer Science at Woolf University.",
           details: "",
           link: "https://woolf.university/academics/degrees/9246435f-c1df-49e2-ac52-c38dfd240001",
         },
         {
           title: "Sharda Global School",
           image: sgs,
-          description: "2017–2024",
+          description: "Ranchi",
+          date: "2017–2024",
           type: "sgs",
-          longDescription: "",
-          details: "",
+          longDescription:
+            "Completed my 10th with 96.2% and 12th PCM with 86.4%",
+          details: "National finalist in Vivo Ignite Science and Innovation awards, Build Quadcopter Drone, and more.",
           link: "https://www.shardaglobalschool.com/",
         },
       ],
@@ -249,19 +267,31 @@ const RecruiterSection = () => {
       title: "Experience",
       cards: [
         {
+          title: "Buddy",
+          image: sst,
+          description: "Being a Mentor @SST",
+          type: "sst",
+          longDescription:
+            "As a Buddy, I help first-year students improve their academic performance and adapt to college life by mentoring them, organizing interactive sessions, and being their go-to support.",
+          details:
+            "I conduct onboarding sessions, clear doubts, and build a friendly environment for juniors so they feel confident. I also keep track of their academic performance and help them with any challenges they face.",
+        },
+        {
           title: "UG Senpai",
           image: sst,
           description: "Helping Juniors Settle In @SST",
+          date: "Jun 2025 – Present",
           type: "sst",
           longDescription:
             "As a UG Senpai, I help first-year students smoothly transition into college life by mentoring them, organizing interactive sessions, and being their go-to support.",
           details:
-            "I conduct onboarding sessions, clear doubts, and build a friendly environment for juniors so they feel confident, connected, and at home during their first trimester.",
+            "I conduct teaching sessions, clear doubts, and build a friendly environment for juniors so they feel confident, connected, and at home during their first trimester.",
         },
         {
           title: "Co-Founder, Lead Developer",
           image: vector,
           description: "NSET preparation platform",
+          date: "Mar 2025 – Present",
           type: "vector",
           longDescription:
             "A platform that helps students prepare for NSET exams by providing resources and mock interviews.",
@@ -320,7 +350,7 @@ const RecruiterSection = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#141414] text-white py-10">
+    <div className="min-h-screen bg-[#141414] text-white pt-10">
       <div className="max-w-[2000px] mx-auto">
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex} className="mb-16">
@@ -420,6 +450,11 @@ const RecruiterSection = () => {
                 <h2 className="text-3xl font-bold mb-4">
                   {selectedCard.title}
                 </h2>
+                {selectedCard.date && (
+                  <div className="text-gray-400 text-base mb-2">
+                    {selectedCard.date}
+                  </div>
+                )}
                 <p className="text-gray-300 text-lg mb-6">
                   {selectedCard.longDescription}
                 </p>
@@ -432,7 +467,7 @@ const RecruiterSection = () => {
                       className="bg-white text-black px-6 py-3 rounded font-semibold hover:bg-gray-200 transition-colors"
                       onClick={() => handleActionClick(selectedCard)}
                     >
-                      Try It Out
+                      Link
                     </button>
                   )}
                   {selectedCard.githubLink && (
@@ -456,6 +491,11 @@ const RecruiterSection = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      <div className="pb-2">
+        <p className="text-center text-gray-500 text-sm mt-8">
+          Made with ❤️ by Shaurya Verma.
+        </p>
+      </div>
     </div>
   );
 };

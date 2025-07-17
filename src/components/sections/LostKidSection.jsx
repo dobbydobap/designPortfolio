@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import terminalFun from "../../assets/images/cards/terminalFun.png";
+import waves from "../../assets/images/cards/waves.png";
+import sst from "../../assets/images/cards/sst.png";
+import vector from "../../assets/images/cards/vector.png";
+import linkedin from "../../assets/images/cards/linkedin.png";
+import gmail from "../../assets/images/cards/gmail.png";
+import insta from "../../assets/images/cards/instagram.jpg";
+import hangover from "../../assets/images/cards/hangover.jpeg";
+import alice from "../../assets/images/cards/alice.jpg";
+import moneyheist from "../../assets/images/cards/moneyheist.jpg";
+import wednesday from "../../assets/images/cards/wednesday.png";
 
 const LostKidSection = () => {
   const navigate = useNavigate();
@@ -103,73 +113,102 @@ const LostKidSection = () => {
 
   const sections = [
     {
-      title: "Learning Journey",
+      title: "Top Picks for You",
       cards: [
         {
-          title: "My Story",
-          image: "https://picsum.photos/300/169",
-          description: "Discover my coding journey and how I got started",
-          type: "story",
+          title: "Terminal Fun",
+          image: terminalFun,
+          description: "Try out some fun terminal activities and games",
+          type: "terminal-fun",
           longDescription:
-            "My personal journey from being a complete beginner to becoming a passionate developer.",
+            "Interactive terminal-based games and activities that make learning programming concepts fun and engaging.",
           details:
-            "Started with curiosity about how websites work, then dove deep into programming fundamentals. Every bug, every error, and every small victory shaped my learning path. This is the story of how I fell in love with coding.",
+            "Experience coding concepts through play! From simple text adventures to logic puzzles, these activities help reinforce programming fundamentals in an entertaining way.",
+          link: "/terminal-fun",
         },
         {
-          title: "Learning Path",
-          image: "https://picsum.photos/300/169",
-          description: "See the resources and courses that helped me grow",
-          type: "learning-path",
+          title: "Wanna join SST?",
+          image: sst,
+          description: "Learn about the SST and how to join",
+          type: "sst",
           longDescription:
-            "A curated collection of the best learning resources that accelerated my programming journey.",
+            "Scaler School of Technology is a new gen college for tech enthusiasts.",
           details:
-            "From freeCodeCamp to Udemy courses, from YouTube tutorials to documentation deep-dives. Discover the exact path I followed and the resources that made the biggest impact on my learning.",
+            "Join the Scaler School of Technology to learn from industry experts, work on real-world projects, and become job-ready. The SST offers a unique curriculum designed to bridge the gap between education and employment in the tech industry.",
+          link: "https://chat.whatsapp.com/H9eTkTOCxa2LQimCk90XXc",
         },
         {
-          title: "Milestones",
-          image: "https://picsum.photos/300/169",
-          description: "Key achievements in my learning journey",
-          type: "milestones",
+          title: "Start preparing for SST",
+          image: vector,
+          description: "Get ready for the Scaler School of Technology",
+          type: "sst-preparation",
           longDescription:
-            "Celebrating the important moments and achievements that marked my progress as a developer.",
+            "Prepare for the Scaler School of Technology with our comprehensive resources and guidance.",
           details:
-            'First "Hello World", first deployed website, first contribution to open source, and many more milestones that kept me motivated throughout my learning journey.',
+            "Access study materials, practice tests, and expert tips to excel in the SST entrance process. Our preparation resources are designed to help you succeed and secure your place in this innovative tech college.",
+          link: "https://vector-nine.vercel.app/",
         },
       ],
     },
     {
-      title: "Projects & Practice",
+      title: "Projects",
       cards: [
         {
-          title: "Mini Projects",
-          image: "https://picsum.photos/300/169",
-          description: "Small projects I built while learning",
-          type: "mini-projects",
+          title: "Waves",
+          image: waves,
+          description: "Chatroom without internet",
+          type: "waves",
           longDescription:
-            "A collection of small but meaningful projects that helped me practice and apply what I learned.",
+            "A revolutionary web chat application that enables communication without internet connectivity for local networks.",
           details:
-            "From simple calculators to weather apps, from todo lists to basic games. Each project taught me something new and helped build my confidence as a developer.",
+            "Go try this amazing project!",
+          link: "https://waves-c53a.onrender.com/",
+        },
+      ],
+    },
+    {
+      title: "Netflix Recommendations",
+      cards: [
+        {
+          title: "Hangover",
+          image: hangover,
+          description: "A hilarious comedy movie",
+          longDescription:
+            "A comedy movie that follows the misadventures of a group of friends who find themselves in outrageous situations.",
+          details:
+            "Join the characters as they navigate through unexpected challenges, laugh-out-loud moments, and unforgettable experiences. Perfect for a binge-watch session with friends. It has 3 parts, each more entertaining than the last.",
+          link: "https://net2025.cc/home",
         },
         {
-          title: "Code Challenges",
-          image: "https://picsum.photos/300/169",
-          description: "Solutions to coding challenges I solved",
-          type: "challenges",
+          title: "Alice in Borderland",
+          image: alice,
+          description: "A thrilling survival game series",
           longDescription:
-            "My solutions to various coding challenges from platforms like LeetCode, HackerRank, and CodeWars.",
+            "A gripping series that combines elements of survival, mystery, and psychological thriller.",
           details:
-            "Problem-solving is a crucial skill for any developer. Here you'll find my approach to different types of coding challenges and how I think through problems.",
+            "Follow a group of individuals who find themselves trapped in a deadly game, where they must compete in various challenges to survive. With its intense plot twists and complex characters, this series keeps you on the edge of your seat.",
+          link: "https://net2025.cc/home",
         },
         {
-          title: "Learning Resources",
-          image: "https://picsum.photos/300/169",
-          description: "Resources that helped me learn programming",
-          type: "resources",
+          title: "Money Heist",
+          image: moneyheist,
+          description: "A Spanish heist crime drama series",
           longDescription:
-            "A comprehensive list of books, websites, courses, and tools that were invaluable in my learning journey.",
+            "A critically acclaimed series that follows a group of robbers who plan and execute a meticulously crafted heist on the Royal Mint of Spain.",
           details:
-            "Hand-picked resources that I found most helpful, organized by topic and difficulty level. Perfect for anyone starting their programming journey.",
+            "With its intricate plot, compelling characters, and unexpected twists, Money Heist has captivated audiences worldwide. The series explores themes of loyalty, betrayal, and the complexities of human relationships amidst high-stakes situations.",
+          link: "https://net2025.cc/home",
         },
+        {
+          title: "Wednesday",
+          image: wednesday,
+          description: "A supernatural mystery series",
+          longDescription:
+            "A darkly comedic series that follows Wednesday Addams as she navigates her way through a peculiar boarding school for outcasts.",
+          details:
+            "With its unique blend of supernatural elements, mystery, and humor, Wednesday offers a fresh take on the beloved Addams Family character. The series delves into themes of identity, friendship, and the challenges of fitting in while embracing one's individuality.",
+          link: "https://net2025.cc/home",
+        }
       ],
     },
     {
@@ -186,23 +225,60 @@ const LostKidSection = () => {
             "Experience coding concepts through play! From simple text adventures to logic puzzles, these activities help reinforce programming fundamentals in an entertaining way.",
           link: "/terminal-fun",
         },
+        // {
+        //   title: "Shaurya.exe",
+        //   description: "Chat with Shaurya's AI assistant",
+        //   type: "ai",
+        //   image: "https://picsum.photos/300/169",
+        //   link: "/shaurya-exe",
+        //   longDescription:
+        //     "An AI-powered chatbot that can help you with programming questions, debugging, and learning guidance.",
+        //   details:
+        //     "Built with modern AI technology, this assistant can explain complex concepts, help debug code, suggest learning resources, and even have casual conversations about programming.",
+        // },
+      ],
+    },
+    {
+      title: "Take Action",
+      cards: [
         {
-          title: "Shaurya.exe",
-          description: "Chat with Shaurya's AI assistant",
-          type: "ai",
-          image: "https://picsum.photos/300/169",
-          link: "/shaurya-exe",
+          title: "LinkedIn Profile",
+          image: linkedin,
+          description: "Connect on LinkedIn",
+          type: "linkedin",
           longDescription:
-            "An AI-powered chatbot that can help you with programming questions, debugging, and learning guidance.",
+            "Connect with me on LinkedIn for professional networking and updates.",
           details:
-            "Built with modern AI technology, this assistant can explain complex concepts, help debug code, suggest learning resources, and even have casual conversations about programming.",
+            "Regular updates on professional achievements, industry insights, and networking opportunities.",
+          link: "https://www.linkedin.com/in/astro-dude/",
+        },
+        {
+          title: "Contact Me",
+          image: gmail,
+          description: "Reach out directly",
+          type: "contact",
+          longDescription:
+            "Get in touch for collaborations, project inquiries, or general questions.",
+          details: "Quick response guaranteed.",
+          link: "mailto:sagittariusshaurya5@gmail.com",
+        },
+        {
+          title: "Instagram",
+          image: insta,
+          description: "Follow on Instagram",
+          type: "instagram",
+          longDescription:
+            "Follow my journey on Instagram for behind-the-scenes content and updates.",
+          details:
+            "Get a glimpse of my daily life, coding adventures, and personal insights through engaging posts and stories.",
+          link: "https://www.instagram.com/_shauryanium.perfrauleinide_/",
         },
       ],
     },
   ];
 
   return (
-    <div className="min-h-screen bg-[#141414] text-white py-10">
+    <div className="min-h-screen bg-[#141414] text-white pt-10">
       <div className="max-w-[2000px] mx-auto">
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex} className="mb-16">
@@ -302,6 +378,11 @@ const LostKidSection = () => {
                 <h2 className="text-3xl font-bold mb-4">
                   {selectedCard.title}
                 </h2>
+                {selectedCard.date && (
+                  <div className="text-gray-400 text-base mb-2">
+                    {selectedCard.date}
+                  </div>
+                )}
                 <p className="text-gray-300 text-lg mb-6">
                   {selectedCard.longDescription}
                 </p>
@@ -314,7 +395,7 @@ const LostKidSection = () => {
                       className="bg-white text-black px-6 py-3 rounded font-semibold hover:bg-gray-200 transition-colors"
                       onClick={() => handleActionClick(selectedCard)}
                     >
-                      Try It Out
+                      Link
                     </button>
                   )}
                   {selectedCard.githubLink && (
@@ -338,6 +419,11 @@ const LostKidSection = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      <div className="pb-2">
+        <p className="text-center text-gray-500 text-sm mt-8">
+          Made with ❤️ by Shaurya Verma.
+        </p>
+      </div>
     </div>
   );
 };
