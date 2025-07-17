@@ -2,14 +2,15 @@ import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import shaurya from "../assets/images/shaurya.jpg";
+import InvestorSection from "./sections/InvestorSection";
 
 function Investor() {
   const handlePitchClick = () => {
-    console.log("Pitch button clicked");
+    window.open("https://www.linkedin.com/in/astro-dude/", "_blank");
   };
-
+  
   const handleDetailsClick = () => {
-    console.log("Details button clicked");
+    window.open("https://calendly.com/sagittariusshaurya5/30min", "_blank");
   };
 
   return (
@@ -19,11 +20,12 @@ function Investor() {
         backgroundImage={shaurya}
         heading="Big Bets on the Next Big Thing?"
         description="I'm building something exciting in ed-tech. Let's talk numbers, vision, and how you can be part of something game-changing."
-        primaryButtonText="View Pitch Deck"
-        secondaryButtonText="Learn More"
+        primaryButtonText="LinkedIn"
+        secondaryButtonText="Schedule a Call"
         onPrimaryButtonClick={handlePitchClick}
         onSecondaryButtonClick={handleDetailsClick}
       />
+      <InvestorSection />
       
     </div>
   );
