@@ -18,8 +18,8 @@ function LostKid() {
       <Header />
       <Hero
         backgroundImage={shaurya}
-        heading="College Hunt Driving You Crazy?"
-        description="I've been there. Let me show you how Scaler School of Technology changed everything for me."
+        heading="Don't know what to do next?"
+        description="I've been there. Prepare for SST or just want to chill? Whatever it is I have got you covered."
         primaryButtonText="Level Up"
         secondaryButtonText="Join chaos"
         onPrimaryButtonClick={handleApplyClick}
