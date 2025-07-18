@@ -139,6 +139,15 @@ const InvestorSection = () => {
           link: "https://vector-nine.vercel.app/",
           githubLink: "https://github.com/astro-dude/vector",
         },
+        {
+          title: "Schedule a Call",
+          image: schedule,
+          description: "Book a time to discuss",
+          longDescription:
+            "Book a 30-minute call with me to discuss potential collaborations, projects, or any queries you may have.",
+          details: "Use Calendly to find a suitable time slot.",
+          link: "https://calendly.com/sagittariusshaurya5/30min",
+        },
       ],
     },
     {

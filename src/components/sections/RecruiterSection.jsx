@@ -14,6 +14,7 @@ import atcoder from "../../assets/images/cards/atcoder.jpg";
 import bits from "../../assets/images/cards/bits.png";
 import woolf from "../../assets/images/cards/woolf.png";
 import sgs from "../../assets/images/cards/sgs.jpeg";
+import schedule from "../../assets/images/cards/schedule.jpg";
 
 const RecruiterSection = () => {
   const navigate = useNavigate();
@@ -141,6 +142,15 @@ const RecruiterSection = () => {
           link: "https://www.linkedin.com/in/astro-dude/",
         },
         {
+          title: "Schedule a Call",
+          image: schedule,
+          description: "Book a time to discuss",
+          longDescription:
+            "Book a 30-minute call with me to discuss potential collaborations, projects, or any queries you may have.",
+          details: "Use Calendly to find a suitable time slot.",
+          link: "https://calendly.com/sagittariusshaurya5/30min",
+        },
+        {
           title: "GitHub",
           image: github,
           description: "Check out my code",
@@ -149,38 +159,6 @@ const RecruiterSection = () => {
             "Explore my open-source contributions and personal projects on GitHub.",
           details: "",
           link: "https://github.com/Astro-Dude",
-        },
-        {
-          title: "CodeChef",
-          image: codechef,
-          description: "Competitive Programming Profile",
-          type: "codechef",
-          longDescription:
-            "Check out my CodeChef profile for my competitive programming journey, contests, and problem-solving stats.",
-          details:
-            "Regular participation in CodeChef contests and consistent problem solving.",
-          link: "https://www.codechef.com/users/astrodude",
-        },
-        {
-          title: "Codeforces",
-          image: codeforces,
-          description: "Competitive Programming Profile",
-          type: "codeforces",
-          longDescription:
-            "Explore my Codeforces profile for contest ratings, problems solved, and achievements.",
-          details:
-            "Active on Codeforces with regular contest participation and upsolving.",
-          link: "https://codeforces.com/profile/AstroDude",
-        },
-        {
-          title: "AtCoder",
-          image: atcoder,
-          description: "Competitive Programming Profile",
-          type: "atcoder",
-          longDescription:
-            "View my AtCoder profile for contest history and problem-solving progress.",
-          details: "Participating in AtCoder Beginner and Regular Contests.",
-          link: "https://atcoder.jp/users/AstroDude",
         },
       ],
     },
@@ -230,10 +208,48 @@ const RecruiterSection = () => {
           type: "sgs",
           longDescription:
             "Completed my 10th with 96.2% and 12th PCM with 86.4%",
-          details: "National finalist in Vivo Ignite Science and Innovation awards, Build Quadcopter Drone, and more.",
+          details:
+            "National finalist in Vivo Ignite Science and Innovation awards, Build Quadcopter Drone, and more.",
           link: "https://www.shardaglobalschool.com/",
         },
       ],
+    },
+    {
+      title: "Competitive Programming",
+      cards: [
+        {
+          title: "CodeChef",
+          image: codechef,
+          description: "Competitive Programming Profile",
+          type: "codechef",
+          longDescription:
+            "Check out my CodeChef profile for my competitive programming journey, contests, and problem-solving stats.",
+          details:
+            "Regular participation in CodeChef contests and consistent problem solving.",
+          link: "https://www.codechef.com/users/astrodude",
+        },
+        {
+          title: "Codeforces",
+          image: codeforces,
+          description: "Competitive Programming Profile",
+          type: "codeforces",
+          longDescription:
+            "Explore my Codeforces profile for contest ratings, problems solved, and achievements.",
+          details:
+            "Active on Codeforces with regular contest participation and upsolving.",
+          link: "https://codeforces.com/profile/AstroDude",
+        },
+        {
+          title: "AtCoder",
+          image: atcoder,
+          description: "Competitive Programming Profile",
+          type: "atcoder",
+          longDescription:
+            "View my AtCoder profile for contest history and problem-solving progress.",
+          details: "Participating in AtCoder Beginner and Regular Contests.",
+          link: "https://atcoder.jp/users/AstroDude",
+        },
+      ]
     },
     {
       title: "Featured Projects",
@@ -334,6 +350,15 @@ const RecruiterSection = () => {
             "Get in touch for collaborations, project inquiries, or general questions.",
           details: "Quick response guaranteed.",
           link: "mailto:sagittariusshaurya5@gmail.com",
+        },
+        {
+          title: "Schedule a Call",
+          image: schedule,
+          description: "Book a time to discuss",
+          longDescription:
+            "Book a 30-minute call with me to discuss potential collaborations, projects, or any queries you may have.",
+          details: "Use Calendly to find a suitable time slot.",
+          link: "https://calendly.com/sagittariusshaurya5/30min",
         },
         {
           title: "GitHub",

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import StalkerSection from "./sections/StalkerSection";
-import shaurya from "../assets/images/shaurya.jpg";
+import shaurya from "../assets/images/shaurya3.jpg";
 
 function Stalker() {
   const handleProjectsClick = () => {
