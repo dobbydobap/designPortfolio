@@ -24,7 +24,7 @@ const InvestorSection = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.05;
+      audioRef.current.volume = 0.2;
       if (isPlaying) {
         audioRef.current.play().catch(() => {});
       } else {
