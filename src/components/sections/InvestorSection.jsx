@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import waves from "../../assets/images/cards/waves.png";
@@ -12,11 +12,32 @@ import bits from "../../assets/images/cards/bits.png";
 import woolf from "../../assets/images/cards/woolf.png";
 import sgs from "../../assets/images/cards/sgs.jpeg";
 import schedule from "../../assets/images/cards/schedule.jpg";
+import aud from "../../assets/audio/millionaire.mp3";
 
 const InvestorSection = () => {
   const navigate = useNavigate();
   const [selectedCard, setSelectedCard] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.05;
+      if (isPlaying) {
+        audioRef.current.play().catch(() => {});
+      } else {
+        audioRef.current.pause();
+      }
+    }
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+  }, [isPlaying]);
 
   const cardVariants = {
     initial: { scale: 1, zIndex: 1 },
@@ -262,6 +283,58 @@ const InvestorSection = () => {
 
   return (
     <div className="min-h-screen bg-[#141414] text-white pt-10">
+      <audio
+        ref={audioRef}
+        src={aud}
+        loop
+        autoPlay
+        style={{ display: "none" }}
+      />
+      <div className="fixed bottom-6 right-6 z-50">
+        <button
+          onClick={() => setIsPlaying((prev) => !prev)}
+          className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-colors duration-200 ${
+            isPlaying ? "bg-green-600" : "bg-red-600"
+          }`}
+          aria-label={isPlaying ? "Pause music" : "Play music"}
+        >
+          {isPlaying ? (
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <rect
+                x="6"
+                y="5"
+                width="4"
+                height="14"
+                rx="1"
+                fill="currentColor"
+              />
+              <rect
+                x="14"
+                y="5"
+                width="4"
+                height="14"
+                rx="1"
+                fill="currentColor"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          )}
+        </button>
+      </div>
+
       <div className="max-w-[2000px] mx-auto">
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex} className="mb-16">

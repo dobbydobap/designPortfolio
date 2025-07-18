@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import terminalFun from "../../assets/images/cards/terminalFun.png";
@@ -12,13 +12,34 @@ import hangover from "../../assets/images/cards/hangover.jpeg";
 import alice from "../../assets/images/cards/alice.jpg";
 import moneyheist from "../../assets/images/cards/moneyheist.jpg";
 import wednesday from "../../assets/images/cards/wednesday.png";
-import drone from "../../assets/images/cards/drone.jpg"; 
+import drone from "../../assets/images/cards/drone.jpg";
 import heliotropicpayload from "../../assets/images/cards/heliotropicpayload.jpeg";
+import aud from "../../assets/audio/rightround.mp3";
 
 const StalkerSection = () => {
   const navigate = useNavigate();
   const [selectedCard, setSelectedCard] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.05;
+      if (isPlaying) {
+        audioRef.current.play().catch(() => {});
+      } else {
+        audioRef.current.pause();
+      }
+    }
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+  }, [isPlaying]);
 
   const cardVariants = {
     initial: { scale: 1, zIndex: 1 },
@@ -177,10 +198,11 @@ const StalkerSection = () => {
           title: "Heliotropic Payload",
           image: heliotropicpayload,
           description: "Solar Tracking Payload",
-          longDescription: "A payload that constantly turns the servo motors to keep the solar panels and sunlight exactly at 90° to increase energy production.",
+          longDescription:
+            "A payload that constantly turns the servo motors to keep the solar panels and sunlight exactly at 90° to increase energy production.",
           details: "",
           link: "https://drive.google.com/drive/u/3/folders/16ycUuny2geLx-UGU4aWAHKLWIlHdB4Fi",
-        }
+        },
       ],
     },
     {
@@ -285,6 +307,58 @@ const StalkerSection = () => {
 
   return (
     <div className="min-h-screen bg-[#141414] text-white pt-10">
+      <audio
+        ref={audioRef}
+        src={aud}
+        loop
+        autoPlay
+        style={{ display: "none" }}
+      />
+      <div className="fixed bottom-6 right-6 z-50">
+        <button
+          onClick={() => setIsPlaying((prev) => !prev)}
+          className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-colors duration-200 ${
+            isPlaying ? "bg-green-600" : "bg-red-600"
+          }`}
+          aria-label={isPlaying ? "Pause music" : "Play music"}
+        >
+          {isPlaying ? (
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <rect
+                x="6"
+                y="5"
+                width="4"
+                height="14"
+                rx="1"
+                fill="currentColor"
+              />
+              <rect
+                x="14"
+                y="5"
+                width="4"
+                height="14"
+                rx="1"
+                fill="currentColor"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          )}
+        </button>
+      </div>
+
       <div className="max-w-[2000px] mx-auto">
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex} className="mb-16">
