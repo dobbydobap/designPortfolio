@@ -13,6 +13,7 @@ import alice from "../../assets/images/cards/alice.jpg";
 import moneyheist from "../../assets/images/cards/moneyheist.jpg";
 import wednesday from "../../assets/images/cards/wednesday.png";
 import drone from "../../assets/images/cards/drone.jpg";
+import heliotropicpayload from "../../assets/images/cards/heliotropicpayload.jpeg";
 
 const LostKidSection = () => {
   const navigate = useNavigate();
@@ -161,8 +162,7 @@ const LostKidSection = () => {
           type: "waves",
           longDescription:
             "A revolutionary web chat application that enables communication without internet connectivity for local networks.",
-          details:
-            "Go try this amazing project!",
+          details: "Go try this amazing project!",
           link: "https://waves-c53a.onrender.com/",
         },
         {
@@ -172,7 +172,16 @@ const LostKidSection = () => {
           longDescription:
             "A very normal quadcopter drone project that showcases the basics of drone technology.",
           link: "https://drive.google.com/drive/u/3/folders/1cgoFiIB0W_73CHqpyXkBSaq_o96Jq2DD",
-        }
+        },
+        {
+          title: "Heliotropic Payload",
+          image: heliotropicpayload,
+          description: "Solar Tracking Payload",
+          longDescription:
+            "A payload that constantly turns the servo motors to keep the solar panels and sunlight exactly at 90° to increase energy production.",
+          details: "",
+          link: "https://drive.google.com/drive/u/3/folders/16ycUuny2geLx-UGU4aWAHKLWIlHdB4Fi",
+        },
       ],
     },
     {
@@ -217,7 +226,7 @@ const LostKidSection = () => {
           details:
             "With its unique blend of supernatural elements, mystery, and humor, Wednesday offers a fresh take on the beloved Addams Family character. The series delves into themes of identity, friendship, and the challenges of fitting in while embracing one's individuality.",
           link: "https://net2025.cc/home",
-        }
+        },
       ],
     },
     {
