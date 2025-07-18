@@ -6,7 +6,7 @@ import shaurya from "../assets/images/shaurya.jpg";
 
 function Recruiter() {
   const handleResumeClick = () => {
-    window.open("https://drive.google.com/file/d/12AXRfYhws0B2wWI7w4pokBwlrUl3jFgc/view", "_blank");
+    window.open("https://drive.google.com/file/d/1HDc_UGIK7wdf4d3xHPgfwh64ffH3ktg6/view?usp=sharing", "_blank");
   };
 
   const handleMoreInfoClick = () => {

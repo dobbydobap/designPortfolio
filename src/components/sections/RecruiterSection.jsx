@@ -349,7 +349,7 @@ const RecruiterSection = () => {
             "Download my comprehensive resume with detailed work experience, skills, and achievements.",
           details:
             "PDF format includes complete professional history, technical skills, certifications, and contact information.",
-          link: "https://drive.google.com/file/d/12AXRfYhws0B2wWI7w4pokBwlrUl3jFgc/view",
+          link: "https://drive.google.com/file/d/1HDc_UGIK7wdf4d3xHPgfwh64ffH3ktg6/view?usp=sharing",
         },
         {
           title: "LinkedIn Profile",
