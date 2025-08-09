@@ -16,6 +16,11 @@ import drone from "../../assets/images/cards/drone.jpg";
 import heliotropicpayload from "../../assets/images/cards/heliotropicpayload.jpeg";
 import aud from "../../assets/audio/majjanilife.mp3";
 import { audio } from "framer-motion/client";
+import qrator from "../../assets/images/cards/qrator2.jpg";
+import beats from "../../assets/images/cards/beats.jpg";
+import backdrop from "../../assets/images/cards/backdrop.jpg";
+import jacob from "../../assets/images/cards/jacob.jpg";
+
 
 const LostKidSection = () => {
   const navigate = useNavigate();
@@ -27,7 +32,7 @@ const LostKidSection = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.2; 
+      audioRef.current.volume = 0.2;
       if (isPlaying) {
         audioRef.current.play().catch(() => {});
       } else {
@@ -150,104 +155,44 @@ const LostKidSection = () => {
             "Experience coding concepts through play! From simple text adventures to logic puzzles, these activities help reinforce programming fundamentals in an entertaining way.",
           link: "/terminal-fun",
         },
-        {
-          title: "Wanna join SST?",
-          image: sst,
-          description: "Learn about the SST and how to join",
-          type: "sst",
-          longDescription:
-            "Scaler School of Technology is a new gen college for tech enthusiasts.",
-          details:
-            "Join the Scaler School of Technology to learn from industry experts, work on real-world projects, and become job-ready. The SST offers a unique curriculum designed to bridge the gap between education and employment in the tech industry.",
-          link: "https://chat.whatsapp.com/H9eTkTOCxa2LQimCk90XXc",
-        },
-        {
-          title: "Start preparing for SST",
-          image: vector,
-          description: "Get ready for the Scaler School of Technology",
-          type: "sst-preparation",
-          longDescription:
-            "Prepare for the Scaler School of Technology with our comprehensive resources and guidance.",
-          details:
-            "Access study materials, practice tests, and expert tips to excel in the SST entrance process. Our preparation resources are designed to help you succeed and secure your place in this innovative tech college.",
-          link: "https://vector-nine.vercel.app/",
-        },
       ],
     },
     {
-      title: "Projects",
+      title: "UI/UX Design",
       cards: [
         {
-          title: "Waves",
-          image: waves,
-          description: "Chatroom without internet",
-          type: "waves",
-          longDescription:
-            "A revolutionary web chat application that enables communication without internet connectivity for local networks.",
-          details: "Go try this amazing project!",
-          link: "https://waves-c53a.onrender.com/",
-        },
-        {
-          title: "Quadcopter drone",
-          image: drone,
-          description: "A quadcopter drone project",
-          longDescription:
-            "A very normal quadcopter drone project that showcases the basics of drone technology.",
-          link: "https://drive.google.com/drive/u/3/folders/1cgoFiIB0W_73CHqpyXkBSaq_o96Jq2DD",
-        },
-        {
-          title: "Heliotropic Payload",
-          image: heliotropicpayload,
-          description: "Solar Tracking Payload",
-          longDescription:
-            "A payload that constantly turns the servo motors to keep the solar panels and sunlight exactly at 90° to increase energy production.",
+          title: "qrator",
+          image: qrator,
+          description: "",
+          longDescription: "",
           details: "",
-          link: "https://drive.google.com/drive/u/3/folders/16ycUuny2geLx-UGU4aWAHKLWIlHdB4Fi",
-        },
-      ],
-    },
-    {
-      title: "Netflix Recommendations",
-      cards: [
-        {
-          title: "Hangover",
-          image: hangover,
-          description: "A hilarious comedy movie",
-          longDescription:
-            "A comedy movie that follows the misadventures of a group of friends who find themselves in outrageous situations.",
-          details:
-            "Join the characters as they navigate through unexpected challenges, laugh-out-loud moments, and unforgettable experiences. Perfect for a binge-watch session with friends. It has 3 parts, each more entertaining than the last.",
-          link: "https://net2025.cc/home",
+          link: "",
         },
         {
-          title: "Alice in Borderland",
-          image: alice,
-          description: "A thrilling survival game series",
-          longDescription:
-            "A gripping series that combines elements of survival, mystery, and psychological thriller.",
-          details:
-            "Follow a group of individuals who find themselves trapped in a deadly game, where they must compete in various challenges to survive. With its intense plot twists and complex characters, this series keeps you on the edge of your seat.",
-          link: "https://net2025.cc/home",
+          title: "SST Beats",
+          image: beats,
+          description: "",
+          longDescription: "",
+          details: "",
+          link: "",
         },
         {
-          title: "Money Heist",
-          image: moneyheist,
-          description: "A Spanish heist crime drama series",
-          longDescription:
-            "A critically acclaimed series that follows a group of robbers who plan and execute a meticulously crafted heist on the Royal Mint of Spain.",
-          details:
-            "With its intricate plot, compelling characters, and unexpected twists, Money Heist has captivated audiences worldwide. The series explores themes of loyalty, betrayal, and the complexities of human relationships amidst high-stakes situations.",
-          link: "https://net2025.cc/home",
+          title: "Photobooth backdrop",
+          image: backdrop,
+          description: "",
+          type: "",
+          longDescription: "",
+          details: "",
+          link: "",
         },
         {
-          title: "Wednesday",
-          image: wednesday,
-          description: "A supernatural mystery series",
-          longDescription:
-            "A darkly comedic series that follows Wednesday Addams as she navigates her way through a peculiar boarding school for outcasts.",
-          details:
-            "With its unique blend of supernatural elements, mystery, and humor, Wednesday offers a fresh take on the beloved Addams Family character. The series delves into themes of identity, friendship, and the challenges of fitting in while embracing one's individuality.",
-          link: "https://net2025.cc/home",
+          title: "Super mentor session",
+          image: jacob,
+          description: "",
+          type: "",
+          longDescription: "",
+          details: "",
+          link: "",
         },
       ],
     },
@@ -290,7 +235,7 @@ const LostKidSection = () => {
             "Connect with me on LinkedIn for professional networking and updates.",
           details:
             "Regular updates on professional achievements, industry insights, and networking opportunities.",
-          link: "https://www.linkedin.com/in/astro-dude/",
+          link: "https://www.linkedin.com/in/varshitha-kolupuri/",
         },
         {
           title: "Contact Me",
@@ -300,18 +245,7 @@ const LostKidSection = () => {
           longDescription:
             "Get in touch for collaborations, project inquiries, or general questions.",
           details: "Quick response guaranteed.",
-          link: "mailto:sagittariusshaurya5@gmail.com",
-        },
-        {
-          title: "Instagram",
-          image: insta,
-          description: "Follow on Instagram",
-          type: "instagram",
-          longDescription:
-            "Follow my journey on Instagram for behind-the-scenes content and updates.",
-          details:
-            "Get a glimpse of my daily life, coding adventures, and personal insights through engaging posts and stories.",
-          link: "https://www.instagram.com/_shauryanium.perfrauleinide_/",
+          link: "mailto:varshitha.kolupuri@gmail.com",
         },
       ],
     },
@@ -319,14 +253,14 @@ const LostKidSection = () => {
 
   return (
     <div className="min-h-screen bg-[#141414] text-white pt-10">
-      <audio
+      {/* <audio
         ref={audioRef}
         src={aud}
         loop
         autoPlay
         style={{ display: "none" }}
-      />
-      <div className="fixed bottom-6 right-6 z-50">
+      /> */}
+      {/* <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={() => setIsPlaying((prev) => !prev)}
           className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-colors duration-200 ${
@@ -369,7 +303,7 @@ const LostKidSection = () => {
             </svg>
           )}
         </button>
-      </div>
+      </div> */}
 
       <div className="max-w-[2000px] mx-auto">
         {sections.map((section, sectionIndex) => (
@@ -513,7 +447,7 @@ const LostKidSection = () => {
       </AnimatePresence>
       <div className="pb-2">
         <p className="text-center text-gray-500 text-sm mt-8">
-          Made with ❤️ by Shaurya Verma.
+          Made with ❤️ by Varshitha Kolupuri.
         </p>
       </div>
     </div>

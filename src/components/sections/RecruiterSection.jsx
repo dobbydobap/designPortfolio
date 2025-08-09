@@ -13,9 +13,15 @@ import codeforces from "../../assets/images/cards/codeforces.jpg";
 import atcoder from "../../assets/images/cards/atcoder.jpg";
 import bits from "../../assets/images/cards/bits.png";
 import woolf from "../../assets/images/cards/woolf.png";
-import sgs from "../../assets/images/cards/sgs.jpeg";
 import schedule from "../../assets/images/cards/schedule.jpg";
 import aud from "../../assets/audio/bhaag.mp3";
+import qrator from "../../assets/images/cards/qrator2.jpg";
+import beats from "../../assets/images/cards/beats.jpg";
+import backdrop from "../../assets/images/cards/backdrop.jpg";
+import jacob from "../../assets/images/cards/jacob.jpg";
+import qrator3 from "../../assets/images/cards/qrator3.jpg";
+import movieexp from "../../assets/images/cards/movieexp.jpg";
+import memorygame from "../../assets/images/cards/memorygame.jpg";
 
 const RecruiterSection = () => {
   const navigate = useNavigate();
@@ -140,16 +146,16 @@ const RecruiterSection = () => {
       title: "Top Picks for You",
       cards: [
         {
-          title: "Waves",
-          image: waves,
-          description: "Chatroom without internet",
-          type: "waves",
+          title: "Qrator",
+          image: qrator3,
+          description: "",
+          type: "qrator",
           longDescription:
-            "A revolutionary web chat application that enables communication without internet connectivity for local networks.",
+            "React, Vite, Node.js, Express, Supabase, Google Gemini API",
           details:
-            "Built with Socket.io and P2P technology, allowing users to create global or local networks for messaging. Features include real-time group chat functionality.",
-          link: "https://waves-c53a.onrender.com/",
-          githubLink: "https://github.com/wavey-waves/waves",
+            "Contributed to an AI-powered content creation platform, featuring idea/script/thumbnail generation, SEO tools, and Google Auth integration.",
+          link: "",
+          githubLink: "https://github.com/dobbydobap/Qrator",
         },
         {
           title: "LinkedIn Profile",
@@ -160,7 +166,7 @@ const RecruiterSection = () => {
             "Connect with me on LinkedIn for professional networking and updates.",
           details:
             "Regular updates on professional achievements, industry insights, and networking opportunities.",
-          link: "https://www.linkedin.com/in/astro-dude/",
+          link: "hhttps://www.linkedin.com/in/varshitha-kolupuri/",
         },
         {
           title: "Schedule a Call",
@@ -179,7 +185,7 @@ const RecruiterSection = () => {
           longDescription:
             "Explore my open-source contributions and personal projects on GitHub.",
           details: "",
-          link: "https://github.com/Astro-Dude",
+          link: "https://github.com/dobbydobap",
         },
       ],
     },
@@ -221,54 +227,50 @@ const RecruiterSection = () => {
           details: "",
           link: "https://woolf.university/academics/degrees/9246435f-c1df-49e2-ac52-c38dfd240001",
         },
-        {
-          title: "Sharda Global School",
-          image: sgs,
-          description: "Ranchi",
-          date: "2017–2024",
-          type: "sgs",
-          longDescription:
-            "Completed my 10th with 96.2% and 12th PCM with 86.4%",
-          details:
-            "National finalist in Vivo Ignite Science and Innovation awards, Build Quadcopter Drone, and more.",
-          link: "https://www.shardaglobalschool.com/",
-        },
       ],
     },
     {
-      title: "Competitive Programming",
+      title: "UI/UX Design",
       cards: [
         {
-          title: "CodeChef",
-          image: codechef,
-          description: "Competitive Programming Profile",
-          type: "codechef",
+          title: "qrator",
+          image: qrator,
+          description: "",
           longDescription:
-            "Check out my CodeChef profile for my competitive programming journey, contests, and problem-solving stats.",
+            "",
           details:
-            "Regular participation in CodeChef contests and consistent problem solving.",
-          link: "https://www.codechef.com/users/astrodude",
+            "",
+          link: "",
         },
         {
-          title: "Codeforces",
-          image: codeforces,
-          description: "Competitive Programming Profile",
-          type: "codeforces",
+          title: "SST Beats",
+          image: beats,
+          description: "",
           longDescription:
-            "Explore my Codeforces profile for contest ratings, problems solved, and achievements.",
+            "",
           details:
-            "Active on Codeforces with regular contest participation and upsolving.",
-          link: "https://codeforces.com/profile/AstroDude",
+            "",
+          link: "",
         },
         {
-          title: "AtCoder",
-          image: atcoder,
-          description: "Competitive Programming Profile",
-          type: "atcoder",
+          title: "Photobooth backdrop",
+          image: backdrop,
+          description: "",
+          type: "",
           longDescription:
-            "View my AtCoder profile for contest history and problem-solving progress.",
-          details: "Participating in AtCoder Beginner and Regular Contests.",
-          link: "https://atcoder.jp/users/AstroDude",
+            "",
+          details: "",
+          link: "",
+        },
+        {
+          title: "Super mentor session",
+          image: jacob,
+          description: "",
+          type: "",
+          longDescription:
+            "",
+          details: "",
+          link: "",
         },
       ],
     },
@@ -276,43 +278,45 @@ const RecruiterSection = () => {
       title: "Featured Projects",
       cards: [
         {
-          title: "Waves",
-          image: waves,
-          description: "Chatroom without internet",
-          type: "waves",
+          title: "Qrator",
+          image: qrator3,
+          description: "",
+          type: "qrator",
           longDescription:
-            "A revolutionary web chat application that enables communication without internet connectivity for local networks.",
+            "React, Vite, Node.js, Express, Supabase, Google Gemini API",
           details:
-            "Built with Socket.io and P2P technology, allowing users to create global or local networks for messaging. Features include real-time group chat functionality.",
-          link: "https://waves-c53a.onrender.com/",
-          githubLink: "https://github.com/wavey-waves/waves",
+            "Contributed to an AI-powered content creation platform, featuring idea/script/thumbnail generation, SEO tools, and Google Auth integration.",
+          link: "",
+          githubLink: "https://github.com/dobbydobap/Qrator",
         },
         {
-          title: "Vector",
-          image: vector,
-          description: "NSET preparation",
-          type: "vector",
+          title: "Movie Explorer",
+          image: movieexp,
+          description: "",
+          type: "qrator",
           longDescription:
-            "A platform that helps students prepare for NSET exams by providing resources and mock interviews.",
-          details: "Built with React, firebase, and razorpay for payment.",
-          link: "https://vector-nine.vercel.app/",
-          githubLink: "https://github.com/astro-dude/vector",
+            "React, Vite, Tailwind CSS, TMDB API",
+          details:
+            "Built a responsive movie discovery web app with live search, detailed movie info, and light/dark mode, utilizing TMDB API for data.",
+          link: "https://movie-explorer-opal.vercel.app/",
+          githubLink: "https://github.com/dobbydobap/MovieExplorer",
+        },
+        {
+          title: "Memory card game",
+          image: memorygame,
+          description: "",
+          longDescription:
+            "JavaScript",
+          details:
+            "Developed a classic memory card game, demonstrating proficiency in front-end development and interactive UI/UX principles.",
+          link: "https://dobbydobap.github.io/Memory-card-game/",
+          githubLink: "https://github.com/dobbydobap/Memory-card-game",
         },
       ],
     },
     {
       title: "Experience",
       cards: [
-        {
-          title: "Buddy",
-          image: sst,
-          description: "Being a Mentor @SST",
-          type: "sst",
-          longDescription:
-            "As a Buddy, I help first-year students improve their academic performance and adapt to college life by mentoring them, organizing interactive sessions, and being their go-to support.",
-          details:
-            "I conduct onboarding sessions, clear doubts, and build a friendly environment for juniors so they feel confident. I also keep track of their academic performance and help them with any challenges they face.",
-        },
         {
           title: "UG Senpai",
           image: sst,
@@ -325,15 +329,15 @@ const RecruiterSection = () => {
             "I conduct teaching sessions, clear doubts, and build a friendly environment for juniors so they feel confident, connected, and at home during their first trimester.",
         },
         {
-          title: "Co-Founder, Lead Developer",
+          title: "Interviewer",
           image: vector,
-          description: "NSET preparation platform",
-          date: "Mar 2025 – Present",
-          type: "vector",
+          description: "Conducted mock interviews for NSET",
+          date: "Jun 2025 – Present",
+          type: "sst",
           longDescription:
-            "A platform that helps students prepare for NSET exams by providing resources and mock interviews.",
+            "As an Interviewer, I conducted mock interviews for NSET aspirants, helping them prepare effectively for the exam.",
           details:
-            "At Vector, I handle both operations and development, building the platform from scratch. I also lead mock interview sessions to help students prepare for the Scaler NSET exam. We have 100% selection till date.",
+            "I provide feedback on their performance, helping them improve their interview skills and build confidence.",
         },
       ],
     },
@@ -349,7 +353,7 @@ const RecruiterSection = () => {
             "Download my comprehensive resume with detailed work experience, skills, and achievements.",
           details:
             "PDF format includes complete professional history, technical skills, certifications, and contact information.",
-          link: "https://drive.google.com/file/d/1HDc_UGIK7wdf4d3xHPgfwh64ffH3ktg6/view?usp=sharing",
+          link: "https://drive.google.com/file/d/1gz11Xtc_6AHmeBy4FE2eooo_SZxQNrvv/view",
         },
         {
           title: "LinkedIn Profile",
@@ -360,7 +364,7 @@ const RecruiterSection = () => {
             "Connect with me on LinkedIn for professional networking and updates.",
           details:
             "Regular updates on professional achievements, industry insights, and networking opportunities.",
-          link: "https://www.linkedin.com/in/astro-dude/",
+          link: "https://www.linkedin.com/in/varshitha-kolupuri/",
         },
         {
           title: "Contact Me",
@@ -370,7 +374,7 @@ const RecruiterSection = () => {
           longDescription:
             "Get in touch for collaborations, project inquiries, or general questions.",
           details: "Quick response guaranteed.",
-          link: "mailto:sagittariusshaurya5@gmail.com",
+          link: "mailto:varshitha.kolupuri@gmail.com",
         },
         {
           title: "Schedule a Call",
@@ -389,7 +393,7 @@ const RecruiterSection = () => {
           longDescription:
             "Explore my open-source contributions and personal projects on GitHub.",
           details: "",
-          link: "https://github.com/Astro-Dude",
+          link: "https://github.com/dobbydobap",
         },
       ],
     },
@@ -397,14 +401,14 @@ const RecruiterSection = () => {
 
   return (
     <div className="min-h-screen bg-[#141414] text-white pt-10">
-      <audio
+      {/* <audio
         ref={audioRef}
         src={aud}
         loop
         autoPlay
         style={{ display: "none" }}
-      />
-      <div className="fixed bottom-6 right-6 z-50">
+      /> */}
+      {/* <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={() => setIsPlaying((prev) => !prev)}
           className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-colors duration-200 ${
@@ -447,7 +451,7 @@ const RecruiterSection = () => {
             </svg>
           )}
         </button>
-      </div>
+      </div> */}
 
       <div className="max-w-[2000px] mx-auto">
         {sections.map((section, sectionIndex) => (
@@ -591,7 +595,7 @@ const RecruiterSection = () => {
       </AnimatePresence>
       <div className="pb-2">
         <p className="text-center text-gray-500 text-sm mt-8">
-          Made with ❤️ by Shaurya Verma.
+          Made with ❤️ by Varshitha Kolupuri.
         </p>
       </div>
     </div>

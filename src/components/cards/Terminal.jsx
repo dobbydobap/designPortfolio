@@ -323,42 +323,24 @@ const TerminalFun = () => {
     about: () => [
       <div> </div>,
       <div key="about-1" className="mb-2 text-blue-300">
-        Hi, I'm <span className="font-bold text-white">Shaurya Verma</span> — a
-        student at{" "}
-        <span className="font-semibold text-green-300">
-          Scaler School of Technology
-        </span>{" "}
-        in Bangalore, and someone who’s constantly exploring how technology can
-        solve real-world problems. I go by the name{" "}
-        <strong className="text-yellow-300">AstroDude</strong> online, a
-        reminder of my curiosity and love for understanding how things work,
-        whether it's in code or the universe.
-      </div>,
-      <div key="about-2" className="mb-2 text-green-200">
-        My interests lie in building tools and systems that are both practical
-        and impactful. At{" "}
-        <span className="font-semibold text-green-300">Scaler</span>, I’ve been
-        learning by doing — writing code, building projects, and taking part in
-        initiatives like{" "}
-        <span className="font-semibold text-blue-400">Vector</span>, where we
-        help students prepare for new-age entrance exams like{" "}
-        <span className="font-semibold text-yellow-300">NSET</span> with the
-        right support and resources.
-      </div>,
-      <div key="about-3" className="mb-2 text-purple-200">
-        Outside of academics, I spend a lot of time reflecting on how to make
-        learning more accessible and efficient, especially for students who
-        don’t always have clear guidance. I enjoy{" "}
-        <span className="font-semibold text-pink-300">deep work</span>, solving
-        tough problems, and collaborating with people who are passionate about
-        what they do.
-      </div>,
-      <div key="about-4" className="text-gray-300">
-        This portfolio is a window into the things I’m{" "}
-        <span className="font-semibold text-blue-400">building</span> and{" "}
-        <span className="font-semibold text-green-300">learning</span> along the
-        way.
-      </div>,
+  Hi, I'm <span className="font-bold text-white">Varshitha Kolupuri</span> — a
+  Computer Science student at{" "}
+  <span className="font-semibold text-green-300">
+    Scaler School of Technology
+  </span>, passionate about{" "}
+  <span className="font-semibold text-yellow-300">full-stack development</span> and creating{" "}
+  <span className="font-semibold text-blue-400">innovative web applications</span>. My work combines{" "}
+  <span className="font-semibold text-green-300">technical expertise</span> with{" "}
+  <span className="font-semibold text-pink-300">creative problem-solving</span>. With experience in{" "}
+  <span className="font-semibold text-blue-400">React</span>,{" "}
+  <span className="font-semibold text-green-300">Node.js</span>, and{" "}
+  <span className="font-semibold text-yellow-300">modern web technologies</span>, I build{" "}
+  <span className="font-semibold text-purple-300">responsive applications</span> that deliver{" "}
+  <span className="font-semibold text-blue-400">exceptional user experiences</span>. I also bring{" "}
+  <span className="font-semibold text-green-300">leadership experience</span> from{" "}
+  <span className="font-semibold text-pink-300">mentoring roles</span> and{" "}
+  <span className="font-semibold text-yellow-300">community building</span>.
+</div>,
       <div> </div>,
     ],
     resume: () => [
@@ -369,7 +351,7 @@ const TerminalFun = () => {
       <div key="resume-link" className="mb-1">
         Click on the link to view or download my resume:
         <a
-          href="https://drive.google.com/file/d/12AXRfYhws0B2wWI7w4pokBwlrUl3jFgc/view"
+          href="https://drive.google.com/file/d/1gz11Xtc_6AHmeBy4FE2eooo_SZxQNrvv/view"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 underline ml-2"
@@ -385,26 +367,17 @@ const TerminalFun = () => {
         Projects:
       </div>,
 
-      <div key="vector-title" className="mb-1">
-        <span className="font-semibold text-blue-400">Vector</span>
+      <div key="qrator-title" className="mb-1 mt-4">
+        <span className="font-semibold text-blue-400">Qrator</span>
         <span className="text-gray-400">
           {" "}
-          — Tech Stack: React.js, Tailwind CSS, Firebase, Razorpay
+          — Tech Stack: React, Vite, Node.js, Express, Supabase, Google Gemini API
         </span>
       </div>,
-      <div key="vector-links" className="mb-1">
-        Link:{" "}
+      <div key="qrator-links" className="mb-1">
+        GitHub:{" "}
         <a
-          href="https://vector-nine.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 underline"
-        >
-          Live Project
-        </a>{" "}
-        | GitHub:{" "}
-        <a
-          href="https://github.com/Astro-Dude/vector"
+          href="https://github.com/dobbydobap/Qrator"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 underline"
@@ -412,34 +385,21 @@ const TerminalFun = () => {
           Repository
         </a>
       </div>,
-      <ul
-        key="vector-features"
-        className="list-disc list-inside mb-2 text-green-300"
-      >
-        <li>Mock interview sessions and personalized mentorship features</li>
-        <li>
-          A computer-based test (CBT) system with timers, question navigation,
-          and automated scoring
-        </li>
-        <li>A fully responsive UI optimized for speed and accessibility</li>
-        <li>
-          Firebase authentication and Razorpay integration for secure test
-          booking and payments
-        </li>
-      </ul>,
+      <div key="qrator-description" className="mb-2 text-green-300">
+        Contributed to an AI-powered content creation platform, featuring idea/script/thumbnail generation, SEO tools, and Google Auth integration.
+      </div>,
 
-      <div key="waves-title" className="mb-1 mt-4">
-        <span className="font-semibold text-blue-400">Waves (In Progress)</span>
+      <div key="movieexp-title" className="mb-1 mt-4">
+        <span className="font-semibold text-blue-400">Movie Explorer</span>
         <span className="text-gray-400">
           {" "}
-          — Tech Stack: React (Vite), Tailwind CSS, Node.js, Express, Socket.IO,
-          MongoDB, JWT
+          — Tech Stack: React, Vite, Tailwind CSS, TMDB API
         </span>
       </div>,
-      <div key="waves-links" className="mb-1">
+      <div key="movieexp-links" className="mb-1">
         Link:{" "}
         <a
-          href="https://waves-c53a.onrender.com/"
+          href="https://movie-explorer-opal.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 underline"
@@ -448,7 +408,7 @@ const TerminalFun = () => {
         </a>{" "}
         | GitHub:{" "}
         <a
-          href="https://github.com/wavey-waves/waves"
+          href="https://github.com/dobbydobap/MovieExplorer"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 underline"
@@ -456,31 +416,40 @@ const TerminalFun = () => {
           Repository
         </a>
       </div>,
-      <ul
-        key="waves-features"
-        className="list-disc list-inside mb-2 text-green-300"
-      >
-        <li>
-          Modern real-time chat application supporting global and local
-          (network-based) chat rooms
-        </li>
-        <li>
-          Global chatroom with real-time messaging and presence indicators
-        </li>
-        <li>Network-based chatrooms assigned automatically by IP subnet</li>
-        <li>
-          Secure user authentication with JWT, supporting both anonymous and
-          registered users
-        </li>
-        <li>
-          Dark-themed, responsive UI with typing indicators, timestamps,
-          rate-limiting, and message validations
-        </li>
-        <li>
-          Upcoming: Peer-to-peer (P2P) communication for offline chatting within
-          the same network
-        </li>
-      </ul>,
+      <div key="movieexp-description" className="mb-2 text-green-300">
+        Built a responsive movie discovery web app with live search, detailed movie info, and light/dark mode, utilizing TMDB API for data.
+      </div>,
+
+      <div key="memorygame-title" className="mb-1 mt-4">
+        <span className="font-semibold text-blue-400">Memory Card Game</span>
+        <span className="text-gray-400">
+          {" "}
+          — Tech Stack: JavaScript
+        </span>
+      </div>,
+      <div key="memorygame-links" className="mb-1">
+        Link:{" "}
+        <a
+          href="https://dobbydobap.github.io/Memory-card-game/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 underline"
+        >
+          Live Project
+        </a>
+        | GitHub:{" "}
+        <a
+          href="https://github.com/dobbydobap/MovieExplorer"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 underline"
+        >
+          Repository
+        </a>
+      </div>,
+      <div key="memorygame-description" className="mb-2 text-green-300">
+        Developed a classic memory card game, demonstrating proficiency in front-end development and interactive UI/UX principles.
+      </div>,
       <div> </div>,
     ],
     skills: () => [
@@ -497,13 +466,19 @@ const TerminalFun = () => {
       <div key="skills-tech" className="mb-1">
         <strong className="text-green-300">Technologies & Frameworks:</strong>{" "}
         <span className="text-white">
-          React, Tailwind CSS, Tkinter, CustomTkinter, Pandas, NumPy, Seaborn,
-          Firebase, MySQL, MongoDB
+          React, Tailwind CSS, Pandas, Seaborn
+        </span>
+      </div>,
+      <div key="skills-tech" className="mb-1">
+        <strong className="text-green-300">Design and marketing:</strong>{" "}
+        <span className="text-white">
+          Graphic Design, Digital Marketing, UI/UX Design, Content Creation, Poster
+          Design, Landing Page Development, Canva, Figma
         </span>
       </div>,
       <div key="skills-tools" className="mb-1">
         <strong className="text-pink-300">Tools & Platforms:</strong>{" "}
-        <span className="text-white">Git, GitHub, Linux</span>
+        <span className="text-white">Git, GitHub, Node.js, Supabase, Vercel, Linux OS</span>
       </div>,
       <div> </div>,
     ],
@@ -518,40 +493,29 @@ const TerminalFun = () => {
           href="mailto:sagittariusshaurya5@email.com"
           className="text-blue-400 underline"
         >
-          sagittariusshaurya5@email.com
+          varshitha.kolupuri@email.com
         </a>
       </div>,
       <div key="contact-linkedin" className="mb-1">
         <span className="text-green-300 font-semibold">LinkedIn:</span>{" "}
         <a
-          href="https://www.linkedin.com/in/astro-dude"
+          href="https://www.linkedin.com/in/varshitha-kolupuri/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 underline"
         >
-          www.linkedin.com/in/astro-dude
+          www.linkedin.com/in/varshitha-kolupuri
         </a>
       </div>,
       <div key="contact-github" className="mb-1">
         <span className="text-yellow-300 font-semibold">GitHub:</span>{" "}
         <a
-          href="https://github.com/Astro-Dude"
+          href="https://github.com/dobbydobap"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 underline"
         >
-          https://github.com/Astro-Dude
-        </a>
-      </div>,
-      <div key="contact-github" className="mb-1">
-        <span className="text-fuchsia-400 font-semibold">Instagram:</span>{" "}
-        <a
-          href="https://www.instagram.com/_shauryanium.perfrauleinide_/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-400 underline"
-        >
-          https://github.com/Astro-Dude
+          https://github.com/dobbydobap
         </a>
       </div>,
       <div> </div>,
@@ -676,7 +640,7 @@ const TerminalFun = () => {
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
-              <div className="ml-2 text-gray-400">shaurya@portfolio:~$</div>
+              <div className="ml-2 text-gray-400">varshitha@portfolio:~$</div>
             </div>
 
             {/* Terminal Content */}
